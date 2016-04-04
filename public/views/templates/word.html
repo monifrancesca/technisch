@@ -1,20 +1,27 @@
-<!-- add a new word -->
-<form>
-    <h1>Add a New Word</h1>
-    <label for="newWord">Bitte ein technisches Wort auf Deutsch eingeben:</label>
-    <input type="text" id="newWord" ng-model="newWord" placeholder="Neues Wort" />
-    <label for="description">Englische Übersetzung:</label>
-    <input type="text" id="description" ng-model="description" placeholder="Auf Englisch" />
-    <!--submit button-->
-    <button id="word_submit" ng-click="saveNewWord()" type="button">Einsenden</button>
-</form>
+<div class="row">
+    <div class="col-md-6">
+        <!-- add a new word -->
+        <form class="form-group">
+            <h1>Add a New Word</h1>
+            <label for="newWord">Bitte ein technisches Wort auf Deutsch eingeben:</label>
+            <input type="text" id="newWord" ng-model="newWord" placeholder="Neues Wort" />
+            <label for="description">Englische Übersetzung:</label>
+            <input type="text" id="description" ng-model="description" placeholder="Auf Englisch" />
+            <!--submit button-->
+            <button id="word_submit" ng-click="saveNewWord()" type="button">Einsenden</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <!-- get all words and show them on the DOM -->
+        <h1>Current Words</h1>
+        <div ng-repeat="word in words">
+            <dl class="dl-horizontal">
+                <dt>{{word.word}}</dt>
+                <dd>{{word.description}}</dd>
+            </dl>
 
-<!-- get all words and show them on the DOM -->
-<h1>Current Words</h1>
-<div ng-repeat="word in words">
-<p>{{newWord}}</p>
-<p>{{description}}</p>
-
-<!--&lt;!&ndash; remove a word &ndash;&gt;-->
-<!--<button ng-click="removeLocation(location.id)">Remove Location</button>-->
+        <!--&lt;!&ndash; remove a word &ndash;&gt;-->
+        <!--<button ng-click="removeLocation(location.id)">Remove Location</button>-->
+        </div>
+    </div>
 </div>
