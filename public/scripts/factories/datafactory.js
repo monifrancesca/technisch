@@ -15,7 +15,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
   var retrieveWord = function() {
     var promise = $http.get('/word/').then(function(response) { // go to the GET in word module and wait for a response. then use that data in this next function.
       newWord = response.data; // save those results to the word variable and go back to the controller
-      console.log("inside the retrieveWord", newWord); // newWord is an array of word objects
+      //console.log("inside the retrieveWord", newWord); // newWord is an array of word objects
     });
     return promise; // needed to wrap up this function
   };

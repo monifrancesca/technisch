@@ -26,8 +26,7 @@ myApp.controller('WordController', ['$scope', '$http', 'DataFactory', function($
     //console.log('info in controller', newWord);
     $scope.dataFactory.sendNewWord(newWord).then(function() {
       $scope.dataFactory.getNewWord().then(function() { //go to the data factory and run this function. come back to write the .then when you have the results stored in the data factory.
-        $scope.newWord = $scope.dataFactory.getWordVariable();
-          console.log()// get the data from this function in the data factory and assign it to words (ng-repeat variable) to use in the html ng-repeat
+        $scope.newWord = $scope.dataFactory.getWordVariable(); // get the data from this function in the data factory and assign it to words (ng-repeat variable) to use in the html ng-repeat
       });
     }); // send newWord variable to this function in the data factory
 
