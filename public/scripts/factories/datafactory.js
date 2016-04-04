@@ -41,7 +41,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
     },
     getWordVariable: function() {
       return newWord;
-        console.log('in getWordVariable' + newWord);
+      //console.log('in getWordVariable' + newWord);
     }
   };
 
