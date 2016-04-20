@@ -52,5 +52,23 @@ router.get('/', function(req, res) {
   })
 });
 
+router.delete('/wordList:id', function(req, res) {
+  var wordId = req.params.id;
+  pg.connect(connection, function(err, client, done) {
+    client.query('DELETE FROM words WHERE id = $1',
+        [wordId],
+        function (err, result) {
+          done();
+          if (err) {
+          console.log("Error deleting data: ", err);
+          res.send(false);
+          } else {
+            res.send(result);
+          }
+        });
+  });
+
+});
+
 
 module.exports = router;

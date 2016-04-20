@@ -20,12 +20,12 @@ myApp.factory('DataFactory', ['$http', function($http) {
     return promise; // needed to wrap up this function
   };
 
-  //var deleteFromWordList = function(data) {
-  //  console.log(data);
-  //  var promise = $http.delete('/word/wordList' + data).then(function(response) {
-  //  });
-  //  return promise;
-  //};
+  var deleteFromWordList = function(data) {
+    console.log(data);
+    var promise = $http.delete('/word/wordList' + data).then(function(response) {
+    });
+    return promise;
+  };
 
 
 
@@ -42,6 +42,9 @@ myApp.factory('DataFactory', ['$http', function($http) {
     getWordVariable: function() {
       return newWord;
       //console.log('in getWordVariable' + newWord);
+    },
+    deleteWord: function(id) {
+      return deleteFromWordList(id);
     }
   };
 

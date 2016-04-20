@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-7">
         <!-- add a new word -->
         <div class="col-md-8">
             <form class="form-group">
@@ -17,18 +17,17 @@
             </form>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
         <!-- get all words and show them on the DOM -->
         <div class="col-md-8">
             <h1>Current Words</h1>
             <div ng-repeat="word in words">
                 <dl class="dl">
-                    <dt>{{word.word}}</dt>
-                    <dd>{{word.description}}</dd>
+                    <dt>Deutsch: {{word.word}}</dt>
+                    <dd>Englisch: {{word.description}}</dd>
+                    <!-- remove a word -->
+                    <button class="btn btn-danger" ng-click="deleteWord(word.id)">Remove Word</button>
                 </dl>
-
-            <!--&lt;!&ndash; remove a word &ndash;&gt;-->
-            <!--<button ng-click="removeLocation(location.id)">Remove Location</button>-->
             </div>
         </div>
     </div>

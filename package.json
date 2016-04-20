@@ -19,6 +19,7 @@
     "express-session": "^1.13.0",
     "grunt": "^0.4.5",
     "jquery": "^2.2.2",
-    "pg": "^4.5.2"
+    "pg": "^4.5.2",
+    "translate-google-free": "^0.2.0"
   }
 }

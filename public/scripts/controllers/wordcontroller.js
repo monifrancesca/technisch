@@ -25,13 +25,13 @@ myApp.controller('WordController', ['$scope', '$http', 'DataFactory', function($
   };
 
 
-  //// remove location
-  //$scope.removeLocation = function(id) {
-  //    $scope.dataFactory.adminRemoveLocation(id).then(function() {
-  //        $scope.dataFactory.getLocation().then(function() {
-  //            $scope.locations = $scope.dataFactory.getLocationVariable(); // put up on the DOM
-  //        });
-  //    });
-  //};
+  // remove word
+  $scope.deleteWord = function(id) {
+    $scope.dataFactory.deleteWord(id).then(function() {
+      $scope.dataFactory.getNewWord().then(function() {
+        $scope.words = $scope.dataFactory.getWordVariable();
+      }); // put up on the DOM
+    });
+  };
 
 }]);

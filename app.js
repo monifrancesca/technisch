@@ -2,6 +2,20 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+//var trans = require('translate-google-free');
+//var request = require('request');
+//
+//request('http://www.google.com', function (error, response, body) {
+//  if (!error && response.statusCode == 200) {
+//    console.log(body) // Show the HTML for the Google homepage.
+//  }
+//})
+//
+//trans('Hello world', 'en', 'zh-CN', function(error, ret) {
+//  if (error) throw error;
+//  console.log(ret);
+//});
+//console.log(trans);
 
 //route modules
 var word = require('./routes/wordmodule');
